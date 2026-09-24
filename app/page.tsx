@@ -51,18 +51,14 @@ export default function Home() {
                 >
                   <div>
                     <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                      {job.href ? (
-                        <a
-                          href={job.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-lg font-medium text-foreground transition-colors hover:text-accent"
-                        >
-                          {job.org}
-                        </a>
-                      ) : (
-                        <span className="text-lg font-medium">{job.org}</span>
-                      )}
+                      <a
+                        href={job.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lg font-medium text-foreground transition-colors hover:text-accent"
+                      >
+                        {job.org}
+                      </a>
                       <span className="text-muted">·</span>
                       <span className="text-muted">{job.role}</span>
                     </div>
