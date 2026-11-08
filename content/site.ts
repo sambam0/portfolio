@@ -7,10 +7,19 @@ export const site = {
   nav: [
     { label: "Experience", href: "#experience" },
     { label: "Work", href: "#work" },
+    { label: "Stack", href: "#stack" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
   ],
   experience: [
+    {
+      org: "The Hockey Formula",
+      role: "Head of Digital Operations",
+      dates: "Oct 2026 – Present",
+      href: "https://thehockeyformula.com",
+      blurb:
+        "Building the online side of former NHL player Taylor Leier's player-development business: the course, the member community, and the funnel and automations that sell them.",
+    },
     {
       org: "Carnile",
       role: "Founder",
@@ -30,9 +39,9 @@ export const site = {
       org: "Momentum Labs",
       role: "Co-Founder",
       dates: "Jun 2026 – Jul 2026",
-      href: "https://admissionsos.ai",
+      href: "https://momentumlabs.ai/",
       blurb:
-        "Started in GTM; moved into product and design. Left over creative differences.",
+        "Started in GTM; moved into product and design.",
     },
     {
       org: "IvyAdmit.ai",
@@ -40,7 +49,7 @@ export const site = {
       dates: "Dec 2025 – May 2026",
       href: "https://ivyadmit.ai",
       blurb:
-        "Built the content and Instagram funnel to ~2.6M views and $2K MRR in month one. Shaped B2B strategy with verbal agreements for 20 pilots; scraped Common App data from 50 colleges.",
+        "Built the content and Instagram funnel to ~2.6M views in month one. Shaped B2B strategy with verbal agreements for 20 pilots; scraped Common App data from 50 colleges.",
     },
     {
       org: "Solvance Business Solutions",
@@ -48,7 +57,7 @@ export const site = {
       dates: "Mar 2025 – May 2026",
       href: "https://solvance.net",
       blurb:
-        "Wine-menu iOS app for an EY senior partner ($4K). Meta ads and lead nurture for a Hunter Douglas seller ($700). Local-business sites at $400 MRR.",
+        "Agency doing websites, custom builds and AI. Clients included an EY senior partner (iOS app), a Hunter Douglas seller (Meta ads and lead nurture) and local businesses.",
     },
     {
       org: "Econocorp Inc.",
@@ -70,8 +79,16 @@ export const site = {
       name: "Solvance",
       href: "https://solvance.net",
       description:
-        "Agency work spanning product, ads, and sites: wine-menu scanner, Meta funnels, and local business websites.",
+        "An agency doing websites, custom builds and AI: an iOS app, Meta funnels, and local business websites.",
     },
+  ],
+  stack: [
+    { name: "Claude", href: "https://claude.ai", icon: "/stack/claude.ai.png" },
+    { name: "Cursor", href: "https://cursor.com", icon: "/stack/cursor.com.png" },
+    { name: "Obsidian", href: "https://obsidian.md", icon: "/stack/obsidian.md.jpg" },
+    { name: "Paper", href: "https://paper.design", icon: "/stack/paper.design.png" },
+    { name: "Goldfish", href: "https://goldfish.sh", icon: "/stack/goldfish.sh.png" },
+    { name: "Aqua Voice", href: "https://aquavoice.com", icon: "/stack/aquavoice.com.png" },
   ],
   about:
     "Based in Stockholm, building Carnile solo. Participant in Sweden’s Youngest Entrepreneurs.",
@@ -81,6 +98,8 @@ export const site = {
       href: "https://www.linkedin.com/in/samuel-antoncich-785647358/",
     },
     { label: "GitHub", href: "https://github.com/sambam0" },
+    { label: "Instagram", href: "https://www.instagram.com/sam_shumi/" },
+    { label: "Last.fm", href: "https://www.last.fm/user/sams0nyte" },
     { label: "X", href: "https://x.com/SamuelAntoncich" },
     { label: "Email", href: "mailto:samuel.antoncich@gmail.com" },
   ],

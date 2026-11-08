@@ -1,0 +1,90 @@
+.proto-press {
+  transition:
+    transform 120ms ease-out,
+    border-color 150ms ease-out,
+    background-color 150ms ease-out;
+}
+.proto-press:active {
+  transform: scale(0.97);
+}
+
+.proto-swap {
+  transition:
+    opacity 150ms ease-out,
+    transform 150ms ease-out;
+}
+.proto-swap[data-show="false"] {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+/* Index: expandable rows. Transitions (not keyframes) so a second click reverses from the current value. */
+.idx-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 240ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 180ms ease-out;
+}
+.idx-panel[data-open="true"] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.idx-chevron {
+  transition: transform 240ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+[aria-expanded="true"] .idx-chevron {
+  transform: rotate(45deg);
+}
+
+/* Letter: hover cards scale out of the link that owns them. */
+.ltr-card {
+  opacity: 0;
+  transform: translateY(-2px) scale(0.96);
+  transform-origin: top left;
+  pointer-events: none;
+  transition:
+    opacity 140ms ease-out,
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .ltr-ref:hover .ltr-card,
+  .ltr-ref:focus-within .ltr-card {
+    opacity: 1;
+    transform: none;
+    transition-delay: 60ms;
+  }
+}
+
+/* Proof: entrance stagger. */
+@keyframes proof-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+.proof-in {
+  animation: proof-in 320ms cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proto-press:active {
+    transform: none;
+  }
+  .idx-panel,
+  .idx-chevron,
+  .ltr-card,
+  .proto-swap {
+    transition-property: opacity;
+  }
+  .ltr-card {
+    transform: none;
+  }
+  @keyframes proof-in {
+    from {
+      opacity: 0;
+    }
+  }
+}
